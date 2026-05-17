@@ -15,7 +15,7 @@ public class App {
     public static void main(String[] args) {
         // parse input arguments
         // TODO this later
-        double fitnessThreshold = 2;
+        double fitnessThreshold = 100;
 
         WordFitness wordFitness;
         try {
@@ -23,10 +23,10 @@ public class App {
         } catch (FileNotFoundException e) { System.err.println("Sample file not found. " + e.getMessage()); return; }
 
         try (Scanner sc = new Scanner(System.in)) {
-            while (sc.hasNext()) {
+            while (sc.hasNextLine()) {
                 String nextLine = sc.nextLine();
-                if (wordFitness.getFitness(nextLine) < fitnessThreshold) {
-                    System.out.println(nextLine);
+                if (true) {
+                    System.out.println(nextLine + " " + wordFitness.getFitness(nextLine));
                 }
             }
         }

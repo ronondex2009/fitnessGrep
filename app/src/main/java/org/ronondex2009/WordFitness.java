@@ -51,7 +51,6 @@ public class WordFitness {
                 for (int i = 0; i < 3; i++) { tokenBuffer[i] = tokenBuffer[i + 1];}
                 tokenBuffer[3] = (char) nextLetter;
             }
-            System.out.println(quadgramAppearances);
         }
     }
 
@@ -67,11 +66,12 @@ public class WordFitness {
             // accumulate fitness from quadgrams
             while (true) {
                 // add total appearances (gets divided and normalized later)
-                totalQuadgramsReadFromInput++;
-                if (quadgramAppearances.get(String.valueOf(tokenBuffer)) == null) continue;
-                if (quadgramAppearances.get(String.valueOf(tokenBuffer)) == 0) continue;
-                nonNormalizedFitness -= Math.log((double)quadgramAppearances.get(String.valueOf(tokenBuffer)) / totalQuadgrams);
-                
+                if (quadgramAppearances.get(String.valueOf(tokenBuffer)) != null &&
+                    quadgramAppearances.get(String.valueOf(tokenBuffer)) != 0) {
+                    nonNormalizedFitness -= Math.log((double)quadgramAppearances.get(String.valueOf(tokenBuffer)) / totalQuadgrams);
+                    totalQuadgramsReadFromInput++;
+                }
+
                 // now rotate the next character into the token buffer for next loop (and break at EOF)
                 // TODO find a way to refactor this
                 int nextLetter = getNextLetter(sc); if (nextLetter == -1) break;
