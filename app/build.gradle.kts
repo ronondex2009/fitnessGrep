@@ -27,3 +27,10 @@ application {
     // Define the main class for the application.
     mainClass = "org.ronondex2009.App"
 }
+
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "org.ronondex2009.App";
+    }
+}
