@@ -28,8 +28,9 @@ public class WordFitness {
     /**
      * Builds WordBuilder from pre-calculated quadgram frequencies in a file. Much more reliable than using a sample file.
      * This program has a default file that can be used by calling {@link #FromQuadgramFrequencies()}.
-     * If users can use this method instead of {@link #FromSample(Scanner)}, they should. Also more performant for quality.
-     * Format uses that found in the file {@link https://github.com/gibsjose/statistical-attack/blob/master/english-quadgrams.txt}
+     * If users can use this method instead of {@link #FromSample(Scanner)}, they should. Also more performant for quality.</br>
+     * Format of frequencies file should be lines of:</br>
+     * Quadgram Count</br>
      * TODO add more builder methods for various formats, like XML.
      * @see #FromQuadgramFrequencies()
      * @param quadgramFrequencyScanner
