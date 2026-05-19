@@ -26,3 +26,9 @@ More modes of operation will be added soon.
 - Command line arguments & help message
 - Support for reading from files
 - Custom fitness threshold and extra output formats (such as printing fitness instead of filtering.)
+
+## Notice
+
+app/src/main/resources/defaultEnglishQuadgramFrequencies.txt is obtained from Wortschatz Leipzig and is licensed under CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0. This file is distributed along with this project but not distributed under the same terms as this project. Please see https://wortschatz.uni-leipzig.de/en/usage for terms of usage of their data.
+T. Eckart & U. Quasthoff: Statistical Corpus and Language Comparison on Comparable Corpora.
+In: Building and Using Comparable Corpora, Springer-Verlag Berlin Heidelberg, 2013, ISBN: 978-3-642-20128-8
